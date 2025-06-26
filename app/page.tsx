@@ -5,16 +5,15 @@ import ServiceComponent from "@/components/ClientSideComponents/ServiceComponent
 import ServicesSection from "@/components/ClientSideComponents/ServicesSectionComponent";
 import TestComponent from "@/components/ClientSideComponents/TestComponent";
 
-
 export default function Home() {
   return (
     <div className="">
-        <HeroBanner/>
-         <ServicesSection/> 
-        <TestComponent/>
-         <ServiceComponent/>
-    <ReferencesComponent/>
-      <ContactComponent/> 
+      <HeroBanner />
+      <ServicesSection />
+      <TestComponent />
+      <ServiceComponent />
+      <ReferencesComponent />
+      <ContactComponent />
     </div>
   );
-} 
+}

@@ -7,7 +7,11 @@ const FooterComponent = () => {
       links: [
         { id: 1, text: "Yazılım Geliştirme", href: "/yazilim-gelistirme" },
         { id: 2, text: "Outsourcing", href: "/outsourcing" },
-        { id: 3, text: "Kalite ve Süreç Yönetimi", href: "/kalite-surec-yonetimi" },
+        {
+          id: 3,
+          text: "Kalite ve Süreç Yönetimi",
+          href: "/kalite-surec-yonetimi",
+        },
         { id: 4, text: "Danışmanlık", href: "/danismanlik" },
         { id: 5, text: "IoT Destekli Çözümler", href: "/iot-cozumler" },
       ],
@@ -16,10 +20,26 @@ const FooterComponent = () => {
     products: {
       title: "Ürünler",
       links: [
-        { id: 1, text: "Eğitim Yönetim Sistemi", href: "/egitim-yonetim-sistemi" },
-        { id: 2, text: "İnsan Sermayesi Yönetim Sistemi", href: "/insan-sermayesi-yonetim" },
-        { id: 3, text: "Müşteri İlişkileri Yönetim Sistemi", href: "/musteri-iliskileri-yonetim" },
-        { id: 4, text: "İçerik Yönetim Sistemi", href: "/icerik-yonetim-sistemi" },
+        {
+          id: 1,
+          text: "Eğitim Yönetim Sistemi",
+          href: "/egitim-yonetim-sistemi",
+        },
+        {
+          id: 2,
+          text: "İnsan Sermayesi Yönetim Sistemi",
+          href: "/insan-sermayesi-yonetim",
+        },
+        {
+          id: 3,
+          text: "Müşteri İlişkileri Yönetim Sistemi",
+          href: "/musteri-iliskileri-yonetim",
+        },
+        {
+          id: 4,
+          text: "İçerik Yönetim Sistemi",
+          href: "/icerik-yonetim-sistemi",
+        },
       ],
     },
     // Corporate column
@@ -39,7 +59,7 @@ const FooterComponent = () => {
         { id: 2, text: "Uzman Talep Formu", href: "/uzman-talep-formu" },
       ],
     },
-  }
+  };
 
   // Social media links array
   const socialLinks = [
@@ -78,14 +98,14 @@ const FooterComponent = () => {
       href: "#",
       bgColor: "bg-white/20",
     },
-  ]
+  ];
 
   // Copyright data
   const copyrightData = {
     text: "© Copyright 2010-2021 • Can Çevik",
     year: "2010-2021",
     company: "Can Çevik",
-  }
+  };
 
   return (
     <footer className="bg-red-500 text-white py-12 lg:py-16">
@@ -94,7 +114,9 @@ const FooterComponent = () => {
         <div className="hidden lg:grid lg:grid-cols-4 gap-8 xl:gap-12 mb-12">
           {/* Solutions Column */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">{footerData.solutions.title}</h3>
+            <h3 className="text-xl font-semibold mb-6">
+              {footerData.solutions.title}
+            </h3>
             <ul className="space-y-3">
               {footerData.solutions.links.map((link) => (
                 <li key={link.id}>
@@ -111,7 +133,9 @@ const FooterComponent = () => {
 
           {/* Products Column */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">{footerData.products.title}</h3>
+            <h3 className="text-xl font-semibold mb-6">
+              {footerData.products.title}
+            </h3>
             <ul className="space-y-3">
               {footerData.products.links.map((link) => (
                 <li key={link.id}>
@@ -128,7 +152,9 @@ const FooterComponent = () => {
 
           {/* Corporate Column */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">{footerData.corporate.title}</h3>
+            <h3 className="text-xl font-semibold mb-6">
+              {footerData.corporate.title}
+            </h3>
             <ul className="space-y-3">
               {footerData.corporate.links.map((link) => (
                 <li key={link.id}>
@@ -145,7 +171,9 @@ const FooterComponent = () => {
 
           {/* Contact Column */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">{footerData.contact.title}</h3>
+            <h3 className="text-xl font-semibold mb-6">
+              {footerData.contact.title}
+            </h3>
             <ul className="space-y-3">
               {footerData.contact.links.map((link) => (
                 <li key={link.id}>
@@ -165,11 +193,16 @@ const FooterComponent = () => {
         <div className="lg:hidden space-y-8 mb-12">
           {/* Solutions Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{footerData.solutions.title}</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              {footerData.solutions.title}
+            </h3>
             <ul className="space-y-2">
               {footerData.solutions.links.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
+                  <a
+                    href={link.href}
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -179,11 +212,16 @@ const FooterComponent = () => {
 
           {/* Products Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{footerData.products.title}</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              {footerData.products.title}
+            </h3>
             <ul className="space-y-2">
               {footerData.products.links.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
+                  <a
+                    href={link.href}
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -193,11 +231,16 @@ const FooterComponent = () => {
 
           {/* Corporate Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{footerData.corporate.title}</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              {footerData.corporate.title}
+            </h3>
             <ul className="space-y-2">
               {footerData.corporate.links.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
+                  <a
+                    href={link.href}
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -207,11 +250,16 @@ const FooterComponent = () => {
 
           {/* Contact Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{footerData.contact.title}</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              {footerData.contact.title}
+            </h3>
             <ul className="space-y-2">
               {footerData.contact.links.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
+                  <a
+                    href={link.href}
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -224,7 +272,9 @@ const FooterComponent = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             {/* Copyright */}
-            <div className="text-white/80 text-sm order-2 lg:order-1">{copyrightData.text}</div>
+            <div className="text-white/80 text-sm order-2 lg:order-1">
+              {copyrightData.text}
+            </div>
 
             {/* Social Media Icons */}
             <div className="flex items-center gap-3 order-1 lg:order-2">
@@ -243,7 +293,7 @@ const FooterComponent = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default FooterComponent
+export default FooterComponent;

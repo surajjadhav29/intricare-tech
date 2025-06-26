@@ -1,177 +1,118 @@
+import Image from "next/image";
+import { IoMdArrowForward } from "react-icons/io";
+
 const ReferencesComponent = () => {
-  // Section data
-  const sectionData = {
-    title: "Referanslarımız",
-    subtitle: "Bize güvenen ve beraber çalıştığımız iş ortaklarımız",
-    viewAllText: "Tümünü Gör",
-  }
-
-  
-  const companiesData = {
-    
-    row1: [
-      {
-        id: 1,
-        name: "AKBANK",
-        color: "text-red-600",
-        size: "text-2xl lg:text-3xl",
-      },
-    ],
-  
-    row2: [
-      {
-        id: 2,
-        name: "İstanbul Bilgi Üniversitesi",
-        color: "text-red-600",
-        size: "text-lg lg:text-xl",
-        icon: "🎓",
-      },
-      {
-        id: 3,
-        name: "aktaş",
-        color: "text-blue-600",
-        size: "text-2xl lg:text-3xl",
-      },
-    ],
-    row3: [
-      {
-        id: 4,
-        name: "BORUSAN",
-        color: "text-orange-500",
-        size: "text-xl lg:text-2xl",
-        icon: "🔶",
-      },
-      {
-        id: 5,
-        name: "AKÇANSA",
-        color: "text-blue-600",
-        size: "text-xl lg:text-2xl",
-      },
-      {
-        id: 6,
-        name: "amazon",
-        color: "text-gray-900",
-        size: "text-2xl lg:text-3xl",
-      },
-    ],
-    // Row 4: Two logos
-    row4: [
-      {
-        id: 7,
-        name: "bookmyshow",
-        color: "text-red-600",
-        size: "text-lg lg:text-xl",
-        highlight: "my",
-      },
-      {
-        id: 8,
-        name: "OLA",
-        color: "text-green-600",
-        size: "text-2xl lg:text-3xl",
-        icon: "⚫",
-      },
-    ],
-  }
-  const LogoCard = ({ company }: { company: any }) => (
-    <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-6 lg:p-8 flex items-center justify-center min-h-[100px] lg:min-h-[120px]">
-      <div className="text-center flex items-center gap-2">
-        {company.icon && <span className="text-lg">{company.icon}</span>}
-        <div className={`font-bold ${company.size} ${company.color}`}>
-          {company.highlight ? (
-            <>
-              book<span className="bg-red-600 text-white px-1 rounded">{company.highlight}</span>show
-            </>
-          ) : (
-            company.name
-          )}
-        </div>
-      </div>
-    </div>
-  )
   return (
-    <section className="py-16 lg:py-20 bg-gray-50">
+    <section className="py-10 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            {sectionData.title}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+            Referanslarımız
           </h2>
-          <p className="text-gray-600 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">{sectionData.subtitle}</p>
+          <div className="w-12 h-0.5 bg-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600 text-xl">
+            Bize güvenen ve beraber çalıştığımız iş ortaklarımız
+          </p>
+          <div className="w-12 h-0.5 bg-red-500 mx-auto mt-4"></div>
         </div>
-
-        {/* Desktop Layout */}
-        <div className="hidden md:block max-w-6xl mx-auto">
-          <div className="space-y-6 lg:space-y-8">
-            {/* Row 1: AKBANK (centered) */}
-            <div className="flex justify-center">
-              <div className="w-full max-w-xs lg:max-w-sm">
-                <LogoCard company={companiesData.row1[0]} />
-              </div>
-            </div>
-
-            {/* Row 2: İBÜ + aktaş */}
-            <div className="grid grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
-              {companiesData.row2.map((company) => (
-                <LogoCard key={company.id} company={company} />
-              ))}
-            </div>
-
-            {/* Row 3: BORUSAN + AKÇANSA + amazon */}
-            <div className="grid grid-cols-3 gap-6 lg:gap-8">
-              {companiesData.row3.map((company) => (
-                <LogoCard key={company.id} company={company} />
-              ))}
-            </div>
-
-            {/* Row 4: bookmyshow + OLA */}
-            <div className="grid grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
-              {companiesData.row4.map((company) => (
-                <LogoCard key={company.id} company={company} />
-              ))}
+        <div className=" mx-auto">
+          <div className="flex justify-center -mb-12">
+            <div className="bg-white rounded-xl  shadow-sm p-8 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo1.png"
+                alt="AKBANK"
+                width={200}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
 
-          {/* View All Button */}
-          <div className="text-center mt-12 lg:mt-16">
-            <button className="inline-flex items-center gap-2 text-red-500 hover:text-red-600 font-semibold text-lg lg:text-xl transition-colors duration-300 group">
-              {sectionData.viewAllText}
-              <svg
-                className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
+          <div className="flex justify-center gap-88">
+            <div className="bg-white rounded-xl shadow-sm p-6 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo2.png"
+                alt="İstanbul Bilgi Üniversitesi"
+                width={180}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            <div className="bg-white rounded-xl shadow-sm p-6 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo3.png"
+                alt="aktaş"
+                width={180}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Mobile Layout */}
-        <div className="md:hidden space-y-4">
-          {[...companiesData.row1, ...companiesData.row2, ...companiesData.row3, ...companiesData.row4].map(
-            (company) => (
-              <LogoCard key={company.id} company={company} />
-            ),
-          )}
+          <div className="bg-white rounded-xl shadow-sm p-6  ml-12 -mt-6  w-60 h-28 flex items-center justify-center">
+            <Image
+              src="/logo4.png"
+              alt="BORUSAN"
+              width={160}
+              height={60}
+              className="w-full h-auto object-contain"
+            />
+          </div>
 
-          {/* Mobile View All Button */}
-          <div className="text-center mt-8">
-            <button className="inline-flex items-center gap-2 text-red-500 hover:text-red-600 font-semibold text-lg transition-colors duration-300 group">
-              {sectionData.viewAllText}
-              <svg
-                className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
+          <div className="flex justify-center ml-70 gap-12 -mt-16">
+            <div className="bg-white rounded-xl shadow-sm p-6 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo7.png"
+                alt="bookmyshow"
+                width={180}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            <div className="bg-white rounded-xl  -mt-16 shadow-sm p-6 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo5.png"
+                alt="AKÇANSA"
+                width={160}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            <div className="bg-white rounded-xl ml-3  shadow-sm p-6 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo8.png"
+                alt="OLA"
+                width={180}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            <div className="bg-white rounded-xl -mt-20 shadow-sm p-6 w-60 h-28 flex items-center justify-center">
+              <Image
+                src="/logo6.png"
+                alt="amazon"
+                width={160}
+                height={60}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-center -mt-10">
+            <div className="bg-white rounded-xl shadow-sm p-8 w-60 h-28 flex items-center justify-center">
+              <button className="inline-flex items-center gap-2 text-red-500 hover:text-red-600 font-semibold text-xl transition-colors">
+                Tümünü Gör
+                <IoMdArrowForward />
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
-export default ReferencesComponent
+  );
+};
+
+export default ReferencesComponent;

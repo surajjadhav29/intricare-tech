@@ -1,53 +1,35 @@
+import Image from "next/image";
+
 const ContactComponent = () => {
-  // Contact section data
   const contactData = {
     title: "Bize Ulaşın",
-    description: "Çözüm, hizmet ve ürünlerimiz hakkında detaylı bilgi için bizimle irtibata geçin.",
+    description:
+      "Çözüm, hizmet ve ürünlerimiz hakkında detaylı bilgi için bizimle irtibata geçin.",
     buttonText: "Bize Ulaşın",
-    buttonHref: "/contact",
-  }
-
-  // Icon data (representing the overlapping circles)
-  const iconData = {
-    primaryCircle: {
-      color: "border-gray-400",
-      bgColor: "bg-white",
-    },
-    secondaryCircle: {
-      color: "border-red-500",
-      bgColor: "bg-red-500",
-    },
-  }
-
+    buttonHref: "/",
+  };
   return (
     <section className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Icon */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <div className="relative">
-              {/* Primary Circle (outline) */}
-              <div
-                className={`w-12 h-12 lg:w-16 lg:h-16 rounded-full border-2 ${iconData.primaryCircle.color} ${iconData.primaryCircle.bgColor}`}
-              ></div>
-              {/* Secondary Circle (filled, overlapping) */}
-              <div
-                className={`w-12 h-12 lg:w-16 lg:h-16 rounded-full ${iconData.secondaryCircle.bgColor} absolute -top-2 -right-2 lg:-top-3 lg:-right-3`}
-              ></div>
+              <Image
+                src="/contacticon.png"
+                alt="İstanbul Bilgi Üniversitesi"
+                width={180}
+                height={60}
+                className="w-20 h-20  sm:h-28 sm:w-28 object-contain"
+              />
             </div>
           </div>
-
-          {/* Title */}
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             {contactData.title}
           </h2>
 
-          {/* Description */}
           <p className="text-gray-600 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl mx-auto">
             {contactData.description}
           </p>
-
-          {/* CTA Button */}
           <div>
             <a
               href={contactData.buttonHref}
@@ -59,7 +41,7 @@ const ContactComponent = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactComponent
+export default ContactComponent;
