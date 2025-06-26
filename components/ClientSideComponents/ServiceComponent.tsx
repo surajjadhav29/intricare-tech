@@ -24,29 +24,27 @@ const ServiceComponent = () => {
     },
   ];
   return (
-    <section className="py-12 lg:py-20">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="py-12 lg:py-20 bg-white ">
+      <div className="container mx-auto px-6 max-w-7xl">
         {servicesData.map((service, index) => (
           <div
             key={service.id}
-            className={`${index > 0 ? "mt-20 lg:mt-28" : ""}`}
-          >
+            className={`${index > 0 ? "mt-20 lg:mt-28" : ""}`}>
             <div className="hidden lg:block">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 {service.imagePosition === "right" ? (
                   <>
                     <div className="space-y-6">
-                      <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                      <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 leading-tight">
                         {service.title}
                       </h2>
-                      <p className="text-gray-600 leading-relaxed text-base">
+                      <p className="text-gray-600 leading-relaxed text-lg">
                         {service.description}
                       </p>
-                      <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-6 rounded transition duration-300 mt-8">
+                      <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-6 rounded transition duration-300 mt-8 sm:w-[200px]">
                         {service.buttonText}
                       </button>
                     </div>
-
                     <div className="flex justify-center lg:justify-end">
                       <Image
                         src={service.image}
@@ -70,13 +68,13 @@ const ServiceComponent = () => {
                     </div>
 
                     <div className="space-y-6">
-                      <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                      <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 leading-tight">
                         {service.title}
                       </h2>
-                      <p className="text-gray-600 leading-relaxed text-base">
+                      <p className="text-gray-600 leading-relaxed text-lg">
                         {service.description}
                       </p>
-                      <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-6 rounded transition duration-300 mt-8">
+                      <button className="bg-red-500 hover:bg-red-600 text-white font-medium sm:w-[200px] py-3 px-6 rounded transition duration-300 mt-8">
                         {service.buttonText}
                       </button>
                     </div>
@@ -85,7 +83,7 @@ const ServiceComponent = () => {
               </div>
             </div>
 
-            <div className="lg:hidden space-y-8">
+            <div className="sm:hidden space-y-8">
               <div className="text-center">
                 <Image
                   src={service.image}
@@ -102,7 +100,7 @@ const ServiceComponent = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-6 rounded transition duration-300 w-full sm:w-auto">
+                <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 sm:w-[200px] px-6 rounded-lg transition duration-300 w-full ">
                   {service.buttonText}
                 </button>
               </div>

@@ -2,6 +2,19 @@ import Image from "next/image";
 import { IoMdArrowForward } from "react-icons/io";
 
 const ReferencesComponent = () => {
+
+   const logos = [
+    { src: "/logo1.png"},
+    { src: "/logo2.png" },
+    { src: "/logo3.png"},
+    { src: "/logo4.png"},
+    { src: "/logo7.png"},
+    { src: "/logo5.png"},
+    { src: "/logo8.png"},
+    { src: "/logo6.png"},
+  ]
+
+
   return (
     <section className="py-10 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -15,7 +28,7 @@ const ReferencesComponent = () => {
           </p>
           <div className="w-12 h-0.5 bg-red-500 mx-auto mt-4"></div>
         </div>
-        <div className=" mx-auto">
+        <div className="mx-auto sm:block hidden">
           <div className="flex justify-center -mb-12">
             <div className="bg-white rounded-xl  shadow-sm p-8 w-60 h-28 flex items-center justify-center">
               <Image
@@ -110,6 +123,26 @@ const ReferencesComponent = () => {
             </div>
           </div>
         </div>
+
+        <div className="max-w-6xl mx-auto mb-12 block sm:hidden ">
+          <div className="flex flex-col justify-center items-center gap-6 md:gap-8">
+            {logos.map((logo, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-sm w-62 p-6 h-28 flex items-center justify-center hover:shadow-md transition-shadow duration-300"
+              >
+                <Image
+                  src={logo.src}
+                  alt='img'
+                  width={100}
+                  height={100}
+                  className="w-full h-auto object-contain max-h-16"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

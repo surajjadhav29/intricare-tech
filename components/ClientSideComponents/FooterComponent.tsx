@@ -1,7 +1,10 @@
+import Link from "next/link";
+import { CiFacebook, CiLinkedin } from "react-icons/ci";
+import { SlSocialInstagram } from "react-icons/sl";
+import { TfiTwitter } from "react-icons/tfi";
+
 const FooterComponent = () => {
-  // Footer data organized in arrays
   const footerData = {
-    // Solutions and Services column
     solutions: {
       title: "Çözüm ve Hizmetler",
       links: [
@@ -10,97 +13,55 @@ const FooterComponent = () => {
         {
           id: 3,
           text: "Kalite ve Süreç Yönetimi",
-          href: "/kalite-surec-yonetimi",
+          href: "/",
         },
         { id: 4, text: "Danışmanlık", href: "/danismanlik" },
-        { id: 5, text: "IoT Destekli Çözümler", href: "/iot-cozumler" },
+        { id: 5, text: "IoT Destekli Çözümler", href: "/" },
       ],
     },
-    // Products column
     products: {
       title: "Ürünler",
       links: [
         {
           id: 1,
           text: "Eğitim Yönetim Sistemi",
-          href: "/egitim-yonetim-sistemi",
+          href: "/",
         },
         {
           id: 2,
           text: "İnsan Sermayesi Yönetim Sistemi",
-          href: "/insan-sermayesi-yonetim",
+          href: "/",
         },
         {
           id: 3,
           text: "Müşteri İlişkileri Yönetim Sistemi",
-          href: "/musteri-iliskileri-yonetim",
+          href: "/",
         },
         {
           id: 4,
           text: "İçerik Yönetim Sistemi",
-          href: "/icerik-yonetim-sistemi",
+          href: "/",
         },
       ],
     },
-    // Corporate column
+
     corporate: {
       title: "Kurumsal",
       links: [
-        { id: 1, text: "Hakkımızda", href: "/hakkimizda" },
-        { id: 2, text: "Belge ve Yetkinlikler", href: "/belge-yetkinlikler" },
-        { id: 3, text: "İş Ortakları", href: "/is-ortaklari" },
+        { id: 1, text: "Hakkımızda", href: "/" },
+        { id: 2, text: "Belge ve Yetkinlikler", href: "/" },
+        { id: 3, text: "İş Ortakları", href: "/" },
       ],
     },
-    // Contact column
     contact: {
       title: "İletişim",
       links: [
-        { id: 1, text: "Bilgi İstek Formu", href: "/bilgi-istek-formu" },
-        { id: 2, text: "Uzman Talep Formu", href: "/uzman-talep-formu" },
+        { id: 1, text: "Bilgi İstek Formu", href: "/" },
+        { id: 2, text: "Uzman Talep Formu", href: "/" },
       ],
     },
   };
 
-  // Social media links array
-  const socialLinks = [
-    {
-      id: 1,
-      name: "Medium",
-      icon: "M",
-      href: "#",
-      bgColor: "bg-white/20",
-    },
-    {
-      id: 2,
-      name: "LinkedIn",
-      icon: "in",
-      href: "#",
-      bgColor: "bg-white/20",
-    },
-    {
-      id: 3,
-      name: "Twitter",
-      icon: "𝕏",
-      href: "#",
-      bgColor: "bg-white/20",
-    },
-    {
-      id: 4,
-      name: "Instagram",
-      icon: "📷",
-      href: "#",
-      bgColor: "bg-white/20",
-    },
-    {
-      id: 5,
-      name: "Facebook",
-      icon: "f",
-      href: "#",
-      bgColor: "bg-white/20",
-    },
-  ];
-
-  // Copyright data
   const copyrightData = {
     text: "© Copyright 2010-2021 • Can Çevik",
     year: "2010-2021",
@@ -110,14 +71,12 @@ const FooterComponent = () => {
   return (
     <footer className="bg-red-500 text-white py-12 lg:py-16">
       <div className="container mx-auto px-4">
-        {/* Desktop Layout - 4 Columns */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-8 xl:gap-12 mb-12">
-          {/* Solutions Column */}
           <div>
             <h3 className="text-xl font-semibold mb-6">
               {footerData.solutions.title}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               {footerData.solutions.links.map((link) => (
                 <li key={link.id}>
                   <a
@@ -130,13 +89,11 @@ const FooterComponent = () => {
               ))}
             </ul>
           </div>
-
-          {/* Products Column */}
           <div>
             <h3 className="text-xl font-semibold mb-6">
               {footerData.products.title}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               {footerData.products.links.map((link) => (
                 <li key={link.id}>
                   <a
@@ -149,32 +106,27 @@ const FooterComponent = () => {
               ))}
             </ul>
           </div>
-
-          {/* Corporate Column */}
           <div>
             <h3 className="text-xl font-semibold mb-6">
               {footerData.corporate.title}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               {footerData.corporate.links.map((link) => (
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm leading-relaxed"
-                  >
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm leading-relaxed">
                     {link.text}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Contact Column */}
           <div>
             <h3 className="text-xl font-semibold mb-6">
               {footerData.contact.title}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               {footerData.contact.links.map((link) => (
                 <li key={link.id}>
                   <a
@@ -188,10 +140,7 @@ const FooterComponent = () => {
             </ul>
           </div>
         </div>
-
-        {/* Mobile Layout - Stacked */}
         <div className="lg:hidden space-y-8 mb-12">
-          {/* Solutions Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">
               {footerData.solutions.title}
@@ -201,16 +150,13 @@ const FooterComponent = () => {
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
-                  >
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
                     {link.text}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Products Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">
               {footerData.products.title}
@@ -220,16 +166,13 @@ const FooterComponent = () => {
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
-                  >
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
                     {link.text}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Corporate Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">
               {footerData.corporate.title}
@@ -247,8 +190,6 @@ const FooterComponent = () => {
               ))}
             </ul>
           </div>
-
-          {/* Contact Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">
               {footerData.contact.title}
@@ -267,27 +208,24 @@ const FooterComponent = () => {
             </ul>
           </div>
         </div>
-
-        {/* Bottom Section - Copyright and Social */}
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
             <div className="text-white/80 text-sm order-2 lg:order-1">
               {copyrightData.text}
             </div>
-
-            {/* Social Media Icons */}
-            <div className="flex items-center gap-3 order-1 lg:order-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.id}
-                  href={social.href}
-                  className={`w-8 h-8 ${social.bgColor} rounded-full flex items-center justify-center text-white text-sm font-semibold hover:bg-white/30 transition-colors duration-300`}
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
+            <div className="flex items-center gap-5 order-1 lg:order-2">
+              <Link href='https://www.facebook.com/'>
+                <CiFacebook  className="h-9 w-9 text-white" />
+                </Link>
+                 <Link href='https://www.instagram.com/accounts/login/?hl=en'>
+                <SlSocialInstagram className="h-8 w-8 text-white" />
+                </Link>
+                   <Link href='https://x.com/login?'>
+                <TfiTwitter className="h-8 w-8 text-white"  />
+                </Link>
+                   <Link href='https://in.linkedin.com/?mcid=6844056167778418689&src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418467_crid.657403558724_kw.linkedin%20login%20web_d.c_tid.kwd-849680790155_n.g_mt.e_geo.9198075&cid=&gad_source=1&gad_campaignid=14650114788&gbraid=0AAAAABKX7wHiWz3sAB_ZgSKo--xXdaAn1&gclid=CjwKCAjw3_PCBhA2EiwAkH_j4j6nYcV0APMKGTbKRGDkHvOVfoxCCjjYLxP3CEVzANlSGHjG-u-n0RoCT8cQAvD_BwE&gclsrc=aw.ds'>
+                <CiLinkedin  className="h-8 w-8 text-white"   />
+                </Link>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const TestComponent = () => {
   ];
 
   return (
-    <section className="bg-red-500 py-8 lg:py-16">
+    <section className="bg-[#F84646] py-8 lg:py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 lg:mb-4 leading-tight">
@@ -42,10 +42,10 @@ const TestComponent = () => {
               className="sm:text-start text-center flex sm:flex-row flex-col"
             >
               <div className="sm:w-[75%] w-full sm:mb-0 mb-6">
-                <h3 className="text-white text-lg lg:text-xl">
+                <h3 className="text-white text-xl font-semibold ">
                   {benefit.title}
                 </h3>
-                <h3 className="text-white text-lg lg:text-xl">
+                  <h3 className="text-white text-xl font-semibold">
                   {benefit.subtitle}
                 </h3>
               </div>
