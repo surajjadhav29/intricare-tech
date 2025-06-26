@@ -33,7 +33,7 @@ const ContactComponent = () => {
           <div>
             <a
               href={contactData.buttonHref}
-              className="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 lg:py-4 lg:px-10 rounded-md transition-colors duration-300 text-lg"
+              className="inline-block bg-[#F84646] hover:bg-red-600 text-white font-semibold py-3 px-8 lg:py-4 lg:px-10 rounded-md transition-colors duration-300 text-lg"
             >
               {contactData.buttonText}
             </a>

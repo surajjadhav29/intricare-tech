@@ -3,7 +3,6 @@ import Image from "next/image";
 const ServiceComponent = () => {
   const servicesData = [
     {
-      id: 1,
       title: "Kalite ve Süreç Yönetimi",
       description:
         "Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP® sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır. Projelerinizin yönetiminde destek olmak, zayfı olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMP® metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız.",
@@ -13,7 +12,6 @@ const ServiceComponent = () => {
       imagePosition: "right",
     },
     {
-      id: 2,
       title: "Test Yönetimi ve Analizi",
       description:
         "Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP® sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır. Projelerinizin yönetiminde destek olmak, zayfı olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMP® metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız. Deneyimli test ekibimiz, kurumsal yüksek kalitede yazılım testleri hizmeti ile baştan sona güvenli, kaliteli ve tamamen odaklanmış deneyim sunmaktadır.",
@@ -27,9 +25,7 @@ const ServiceComponent = () => {
     <section className="py-12 lg:py-20 bg-white ">
       <div className="container mx-auto px-6 max-w-7xl">
         {servicesData.map((service, index) => (
-          <div
-            key={service.id}
-            className={`${index > 0 ? "mt-20 lg:mt-28" : ""}`}>
+          <div className='mt-20 lg:mt-28'>
             <div className="hidden lg:block">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 {service.imagePosition === "right" ? (
@@ -41,7 +37,7 @@ const ServiceComponent = () => {
                       <p className="text-gray-600 leading-relaxed text-lg">
                         {service.description}
                       </p>
-                      <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-6 rounded transition duration-300 mt-8 sm:w-[200px]">
+                      <button className="bg-[#F84646] hover:bg-red-600 text-white font-medium py-3 px-6 rounded transition duration-300 mt-8 sm:w-[200px]">
                         {service.buttonText}
                       </button>
                     </div>
@@ -74,7 +70,7 @@ const ServiceComponent = () => {
                       <p className="text-gray-600 leading-relaxed text-lg">
                         {service.description}
                       </p>
-                      <button className="bg-red-500 hover:bg-red-600 text-white font-medium sm:w-[200px] py-3 px-6 rounded transition duration-300 mt-8">
+                      <button className="bg-[#F84646] hover:bg-red-600 text-white font-medium sm:w-[200px] py-3 px-6 rounded transition duration-300 mt-8">
                         {service.buttonText}
                       </button>
                     </div>
@@ -100,7 +96,7 @@ const ServiceComponent = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 sm:w-[200px] px-6 rounded-lg transition duration-300 w-full ">
+                <button className="bg-[#F84646] hover:bg-red-600 text-white font-medium py-3 sm:w-[200px] px-6 rounded-lg transition duration-300 w-full ">
                   {service.buttonText}
                 </button>
               </div>

@@ -78,7 +78,7 @@ const HeaderComponent = () => {
         ...(moveDown
           ? {
               background: `linear-gradient(137deg, rgba(255, 255, 255, 0.70) 24.15%, rgba(255, 255, 255, 0.62) 125.95%)`,
-              backdropFilter: "blur(10px)",
+              //  backdropFilter: "blur(10px)",
             }
           : null),
       }}
@@ -100,7 +100,7 @@ const HeaderComponent = () => {
             <li>
               <Link
                 href="/contact"
-                className="bg-red-500 text-white py-2 px-6 rounded-md hover:bg-red-600 transition duration-300 font-medium"
+                className="bg-[#F84646] text-white py-2 px-6 rounded-md hover:bg-red-600 transition duration-300 font-medium"
               >
                 İletişim
               </Link>
@@ -108,14 +108,14 @@ const HeaderComponent = () => {
           </ul>
         </nav>
       </div>
-      <div className="flex justify-between item-center md:hidden p-3">
+      <div className="flex justify-between item-center md:hidden p-3 ">
         <button className=""  onClick={toggleMobileMenu}>
           <IoMenuOutline className="h-8 w-10 text-black" />
         </button>
         <div className="">
           <Link
             href="/"
-            className="bg-red-500 text-white py-2 px-6 rounded-md hover:bg-red-600 transition duration-300 font-medium"
+            className="bg-[#F84646] text-white py-2 px-6 rounded-md hover:bg-red-600 transition duration-300 font-medium"
           >
             İletişim
           </Link>
@@ -123,8 +123,8 @@ const HeaderComponent = () => {
       </div>
 
         <div
-        className={`mobile-menu fixed top-0 left-0 h-full w-80 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        className={`mobile-menu fixed top-0 left-0 h-full w-80 shadow-lg z-50 transform transition-transform duration-300 ease-in-out md:hidden bg-white ${
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full "
         }`}
       >
         <div className="flex flex-col h-full z-999">
@@ -171,6 +171,8 @@ const HeaderComponent = () => {
                 </Link>
             </div>
         </div>
+
+
         </div>
     </header>
   );

@@ -26,11 +26,12 @@ const HeroBanner = () => {
         </p>
         <div className="flex sm:gap-0 gap-4 h-16 sm:mt-0  bg-white justify-between rounded-md sm:w-md w-full">
           <input
-            type="email"
+           type="email"
             placeholder="Mail bültenimize kayıt ol"
+            required
             className=" focus:outline-none px-4"
           />
-          <button className="bg-red-500 m-1 hover:bg-red-600 text-white sm:w-auto  w-24 text-sm lg:text-lg font-semibold py-3 sm:px-6 px-1 rounded-md transition duration-300">
+          <button className="bg-[#F84646] m-1 hover:bg-red-600 text-white sm:w-auto  w-24 text-sm lg:text-lg font-semibold py-3 sm:px-6 px-1 rounded-md transition duration-300">
             Kayıt Ol
           </button>
         </div>
