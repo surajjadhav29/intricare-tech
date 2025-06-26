@@ -115,7 +115,8 @@ const FooterComponent = () => {
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm leading-relaxed">
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm leading-relaxed"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -150,7 +151,8 @@ const FooterComponent = () => {
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -166,7 +168,8 @@ const FooterComponent = () => {
                 <li key={link.id}>
                   <a
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm">
+                    className="text-white/90 hover:text-white transition-colors duration-300 text-sm"
+                  >
                     {link.text}
                   </a>
                 </li>
@@ -214,18 +217,18 @@ const FooterComponent = () => {
               {copyrightData.text}
             </div>
             <div className="flex items-center gap-5 order-1 lg:order-2">
-              <Link href='https://www.facebook.com/'>
-                <CiFacebook  className="h-9 w-9 text-white" />
-                </Link>
-                 <Link href='https://www.instagram.com/accounts/login/?hl=en'>
+              <Link href="https://www.facebook.com/">
+                <CiFacebook className="h-9 w-9 text-white" />
+              </Link>
+              <Link href="https://www.instagram.com/accounts/login/?hl=en">
                 <SlSocialInstagram className="h-8 w-8 text-white" />
-                </Link>
-                   <Link href='https://x.com/login?'>
-                <TfiTwitter className="h-8 w-8 text-white"  />
-                </Link>
-                   <Link href='https://in.linkedin.com/?mcid=6844056167778418689&src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418467_crid.657403558724_kw.linkedin%20login%20web_d.c_tid.kwd-849680790155_n.g_mt.e_geo.9198075&cid=&gad_source=1&gad_campaignid=14650114788&gbraid=0AAAAABKX7wHiWz3sAB_ZgSKo--xXdaAn1&gclid=CjwKCAjw3_PCBhA2EiwAkH_j4j6nYcV0APMKGTbKRGDkHvOVfoxCCjjYLxP3CEVzANlSGHjG-u-n0RoCT8cQAvD_BwE&gclsrc=aw.ds'>
-                <CiLinkedin  className="h-8 w-8 text-white"   />
-                </Link>
+              </Link>
+              <Link href="https://x.com/login?">
+                <TfiTwitter className="h-8 w-8 text-white" />
+              </Link>
+              <Link href="https://in.linkedin.com/?mcid=6844056167778418689&src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418467_crid.657403558724_kw.linkedin%20login%20web_d.c_tid.kwd-849680790155_n.g_mt.e_geo.9198075&cid=&gad_source=1&gad_campaignid=14650114788&gbraid=0AAAAABKX7wHiWz3sAB_ZgSKo--xXdaAn1&gclid=CjwKCAjw3_PCBhA2EiwAkH_j4j6nYcV0APMKGTbKRGDkHvOVfoxCCjjYLxP3CEVzANlSGHjG-u-n0RoCT8cQAvD_BwE&gclsrc=aw.ds">
+                <CiLinkedin className="h-8 w-8 text-white" />
+              </Link>
             </div>
           </div>
         </div>

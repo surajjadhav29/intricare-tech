@@ -25,7 +25,7 @@ const ServiceComponent = () => {
     <section className="py-12 lg:py-20 bg-white ">
       <div className="container mx-auto px-6 max-w-7xl">
         {servicesData.map((service, index) => (
-          <div className='mt-20 lg:mt-28'>
+          <div className="mt-20 lg:mt-28">
             <div className="hidden lg:block">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 {service.imagePosition === "right" ? (

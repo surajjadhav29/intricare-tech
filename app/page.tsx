@@ -1,9 +1,10 @@
-import HeroBanner from "@/components/ClientSideComponents/BannnerComponent";
-import ContactComponent from "@/components/ClientSideComponents/ContactComponent";
-import ReferencesComponent from "@/components/ClientSideComponents/ReferencesComponent";
-import ServiceComponent from "@/components/ClientSideComponents/ServiceComponent";
-import ServicesSection from "@/components/ClientSideComponents/ServicesSectionComponent";
-import TestComponent from "@/components/ClientSideComponents/TestComponent";
+import HeroBanner from "@/components/HomeComponents/BannnerComponent";
+import ContactComponent from "@/components/HomeComponents/ContactComponent";
+import FooterComponent from "@/components/HomeComponents/FooterComponent";
+import ReferencesComponent from "@/components/HomeComponents/ReferencesComponent";
+import ServiceComponent from "@/components/HomeComponents/ServiceComponent";
+import ServicesSection from "@/components/HomeComponents/ServicesSectionComponent";
+import TestComponent from "@/components/HomeComponents/TestComponent";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServiceComponent />
       <ReferencesComponent />
       <ContactComponent />
+      <FooterComponent />
     </div>
   );
 }

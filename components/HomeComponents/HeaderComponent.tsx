@@ -16,60 +16,63 @@ const navigationItems = [
 ];
 
 const HeaderComponent = () => {
-  const [moveDown, setMoveDown] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [moveDown, setMoveDown] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleScroll = useCallback(
     throttle(() => {
       if (window.scrollY > 40) {
-        setMoveDown(true)
+        setMoveDown(true);
       } else {
-        setMoveDown(false)
+        setMoveDown(false);
       }
     }, 0),
     [],
-  )
+  );
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [handleScroll])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement
-      if (isMobileMenuOpen && !target.closest(".mobile-menu") && !target.closest(".menu-button")) {
-        setIsMobileMenuOpen(false)
+      const target = event.target as HTMLElement;
+      if (
+        isMobileMenuOpen &&
+        !target.closest(".mobile-menu") &&
+        !target.closest(".menu-button")
+      ) {
+        setIsMobileMenuOpen(false);
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [isMobileMenuOpen])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = "unset"
-    }
-  }, [isMobileMenuOpen])
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
-  }
-
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -99,7 +102,7 @@ const HeaderComponent = () => {
             ))}
             <li>
               <Link
-                href="/contact"
+                href="/taskfaq"
                 className="bg-[#F84646] text-white py-2 px-6 rounded-md hover:bg-red-600 transition duration-300 font-medium"
               >
                 İletişim
@@ -109,7 +112,7 @@ const HeaderComponent = () => {
         </nav>
       </div>
       <div className="flex justify-between item-center md:hidden p-3 ">
-        <button className=""  onClick={toggleMobileMenu}>
+        <button className="" onClick={toggleMobileMenu}>
           <IoMenuOutline className="h-8 w-10 text-black" />
         </button>
         <div className="">
@@ -122,7 +125,7 @@ const HeaderComponent = () => {
         </div>
       </div>
 
-        <div
+      <div
         className={`mobile-menu fixed top-0 left-0 h-full w-80 shadow-lg z-50 transform transition-transform duration-300 ease-in-out md:hidden bg-white ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full "
         }`}
@@ -155,25 +158,22 @@ const HeaderComponent = () => {
             </ul>
           </nav>
 
-       
-            <div className="flex items-center gap-5 order-1 lg:order-2 justify-center mt-38">
-              <Link href='https://www.facebook.com/'>
-                <CiFacebook  className="h-9 w-9 text-black" />
-                </Link>
-                 <Link href='https://www.instagram.com/accounts/login/?hl=en'>
-                <SlSocialInstagram className="h-8 w-8 text-black" />
-                </Link>
-                   <Link href='https://x.com/login?'>
-                <TfiTwitter className="h-8 w-8 text-black"  />
-                </Link>
-                   <Link href='https://in.linkedin.com/?mcid=6844056167778418689&src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418467_crid.657403558724_kw.linkedin%20login%20web_d.c_tid.kwd-849680790155_n.g_mt.e_geo.9198075&cid=&gad_source=1&gad_campaignid=14650114788&gbraid=0AAAAABKX7wHiWz3sAB_ZgSKo--xXdaAn1&gclid=CjwKCAjw3_PCBhA2EiwAkH_j4j6nYcV0APMKGTbKRGDkHvOVfoxCCjjYLxP3CEVzANlSGHjG-u-n0RoCT8cQAvD_BwE&gclsrc=aw.ds'>
-                <CiLinkedin  className="h-8 w-8 text-black"   />
-                </Link>
-            </div>
+          <div className="flex items-center gap-5 order-1 lg:order-2 justify-center mt-38">
+            <Link href="https://www.facebook.com/">
+              <CiFacebook className="h-9 w-9 text-black" />
+            </Link>
+            <Link href="https://www.instagram.com/accounts/login/?hl=en">
+              <SlSocialInstagram className="h-8 w-8 text-black" />
+            </Link>
+            <Link href="https://x.com/login?">
+              <TfiTwitter className="h-8 w-8 text-black" />
+            </Link>
+            <Link href="https://in.linkedin.com/?mcid=6844056167778418689&src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418467_crid.657403558724_kw.linkedin%20login%20web_d.c_tid.kwd-849680790155_n.g_mt.e_geo.9198075&cid=&gad_source=1&gad_campaignid=14650114788&gbraid=0AAAAABKX7wHiWz3sAB_ZgSKo--xXdaAn1&gclid=CjwKCAjw3_PCBhA2EiwAkH_j4j6nYcV0APMKGTbKRGDkHvOVfoxCCjjYLxP3CEVzANlSGHjG-u-n0RoCT8cQAvD_BwE&gclsrc=aw.ds">
+              <CiLinkedin className="h-8 w-8 text-black" />
+            </Link>
+          </div>
         </div>
-
-
-        </div>
+      </div>
     </header>
   );
 };

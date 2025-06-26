@@ -3,35 +3,30 @@ import Image from "next/image";
 const ServicesSection = () => {
   const servicesData = [
     {
-   
       title: "Döküman Analizi",
       description:
         "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
       icon: "/File.png",
     },
     {
-      
       title: "Kabul ve Değerlendirme",
       description:
         "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
       icon: "/star.png",
     },
     {
-      
       title: "İş Kuralları Analizi",
       description:
         "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
       icon: "/king.png",
     },
     {
-   
       title: "Akış Diyagramları",
       description:
         "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
       icon: "/graph.png",
     },
     {
-   
       title: "Paydaş Analizi",
       description:
         "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
@@ -58,9 +53,7 @@ const ServicesSection = () => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         {servicesData.map((service) => (
-          <div
-            className="text-center group p-4 rounded-lg hover:shadow-lg transition-shadow duration-300"
-          >
+          <div className="text-center group p-4 rounded-lg hover:shadow-lg transition-shadow duration-300">
             <div
               className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 p-2`}
             >

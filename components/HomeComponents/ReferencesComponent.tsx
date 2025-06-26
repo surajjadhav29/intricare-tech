@@ -2,18 +2,16 @@ import Image from "next/image";
 import { IoMdArrowForward } from "react-icons/io";
 
 const ReferencesComponent = () => {
-
-   const logos = [
-    { src: "/logo1.png"},
+  const logos = [
+    { src: "/logo1.png" },
     { src: "/logo2.png" },
-    { src: "/logo3.png"},
-    { src: "/logo4.png"},
-    { src: "/logo7.png"},
-    { src: "/logo5.png"},
-    { src: "/logo8.png"},
-    { src: "/logo6.png"},
-  ]
-
+    { src: "/logo3.png" },
+    { src: "/logo4.png" },
+    { src: "/logo7.png" },
+    { src: "/logo5.png" },
+    { src: "/logo8.png" },
+    { src: "/logo6.png" },
+  ];
 
   return (
     <section className="py-10 bg-gray-50 overflow-hidden">
@@ -133,7 +131,7 @@ const ReferencesComponent = () => {
               >
                 <Image
                   src={logo.src}
-                  alt='img'
+                  alt="img"
                   width={100}
                   height={100}
                   className="w-full h-auto object-contain max-h-16"
@@ -142,7 +140,6 @@ const ReferencesComponent = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

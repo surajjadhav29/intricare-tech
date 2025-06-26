@@ -45,7 +45,7 @@ const TestComponent = () => {
                 <h3 className="text-white text-xl font-semibold ">
                   {benefit.title}
                 </h3>
-                  <h3 className="text-white text-xl font-semibold">
+                <h3 className="text-white text-xl font-semibold">
                   {benefit.subtitle}
                 </h3>
               </div>

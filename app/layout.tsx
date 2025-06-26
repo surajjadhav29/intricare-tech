@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Manrope } from "next/font/google"; 
-import FooterComponent from "@/components/ClientSideComponents/FooterComponent";
+import { Manrope } from "next/font/google";
+import FooterComponent from "@/components/HomeComponents/FooterComponent";
 
-const manrope = Manrope({ 
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-manrope", 
-  display: 'swap', 
+  variable: "--font-manrope",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} antialiased`}>
-        {children}
-        <FooterComponent />
-      </body>
+      <body className={`${manrope.variable} antialiased`}>{children}</body>
     </html>
   );
 }

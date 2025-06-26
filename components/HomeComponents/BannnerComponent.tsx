@@ -26,7 +26,7 @@ const HeroBanner = () => {
         </p>
         <div className="flex sm:gap-0 gap-4 h-16 sm:mt-0  bg-white justify-between rounded-md sm:w-md w-full">
           <input
-           type="email"
+            type="email"
             placeholder="Mail bültenimize kayıt ol"
             required
             className=" focus:outline-none px-4"
