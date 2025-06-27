@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaPlus, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 
 interface FAQItem {
@@ -120,7 +120,7 @@ const FaqComponent = () => {
         </div>
       )}
 
-      <div className="bg-white rounded-lg border border-gray-200 shadow-sm">
+      <div className="bg-white rounded-lg border border-gray-200 shadow-sm text-black">
         <div className="border-b border-gray-200 p-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-gray-900">FAQ Items</h2>
@@ -132,14 +132,12 @@ const FaqComponent = () => {
               <div
                 key={index}
                 className="w-full rounded-lg shadow-sm items-center bg-tgh-quaternary  p-2  cursor-pointer"
-                onClick={() => handleDescription(index)}
-              >
+                onClick={() => handleDescription(index)}>
                 <div className=" flex justify-between p-2">
                   <div className="w-[900px]">
                     <h1
                       className="px-2 text-xl select-none"
-                      dangerouslySetInnerHTML={{ __html: item?.question }}
-                    ></h1>
+                    >{item?.question }</h1>
                   </div>
                   <div className="relative w-[100px] flex justify-end items-center px-1">
                     <FiPlus
@@ -153,10 +151,8 @@ const FaqComponent = () => {
                 <div>
                   {openItems === index && (
                     <div className="">
-                      <p
-                        className="flex p-3 border-t-2 select-none"
-                        dangerouslySetInnerHTML={{ __html: item?.answer }}
-                      ></p>
+                      <p className="flex p-3 border-t-2 select-none"
+                      >{item?.answer}</p>
                     </div>
                   )}
                 </div>
