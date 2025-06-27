@@ -117,7 +117,7 @@ const HeaderComponent = () => {
         </button>
         <div className="">
           <Link
-            href="/"
+            href="/taskfaq"
             className="bg-[#F84646] text-white py-2 px-6 rounded-md hover:bg-red-600 transition duration-300 font-medium"
           >
             İletişim

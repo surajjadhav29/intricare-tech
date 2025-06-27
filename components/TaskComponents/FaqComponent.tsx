@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaPlus, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FiPlus } from "react-icons/fi";
 
 interface FAQItem {
   id: string;
@@ -25,7 +26,7 @@ const FaqComponent = () => {
   const [newQuestion, setNewQuestion] = useState("");
   const [newAnswer, setNewAnswer] = useState("");
   const [showForm, setShowForm] = useState(false);
-  const [openItems, setOpenItems] = useState<string[]>([]);
+  const [openItems, setOpenItems] = useState<number | null>(null);
 
   const handleAddFAQ = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,8 +45,8 @@ const FaqComponent = () => {
     }
   };
 
-  const toggleItem = (id: any) => {
-    setOpenItems((prevOpenItem) => (prevOpenItem === id ? null : id));
+  const handleDescription = (index: number) => {
+    setOpenItems(openItems === index ? null : index);
   };
 
   return (
@@ -126,32 +127,42 @@ const FaqComponent = () => {
           </div>
         </div>
         <div className="p-6">
-          <div className="space-y-2">
-            {faqItems.map((item, index) => (
-              <div key={item.id} className="border border-gray-200 rounded-lg">
-                <button
-                  onClick={() => toggleItem(item.id)}
-                  className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 focus:outline-none rounded-lg"
-                >
-                  <span className="font-medium text-gray-900">
-                    {item.question}
-                  </span>
-                  {openItems.includes(item.id) ? (
-                    <FaChevronUp className="h-4 w-4 text-gray-500 flex-shrink-0" />
-                  ) : (
-                    <FaChevronDown className="h-4 w-4 text-gray-500 flex-shrink-0" />
-                  )}
-                </button>
-                {openItems.includes(item.id) && (
-                  <div className="px-4 pb-4">
-                    <div className="pt-2 text-gray-600 leading-relaxed border-t border-gray-100">
-                      {item.answer}
-                    </div>
+          {faqItems.map((item: any, index: number) => {
+            return (
+              <div
+                key={index}
+                className="w-full rounded-lg shadow-sm items-center bg-tgh-quaternary  p-2  cursor-pointer"
+                onClick={() => handleDescription(index)}
+              >
+                <div className=" flex justify-between p-2">
+                  <div className="w-[900px]">
+                    <h1
+                      className="px-2 text-xl select-none"
+                      dangerouslySetInnerHTML={{ __html: item?.question }}
+                    ></h1>
                   </div>
-                )}
+                  <div className="relative w-[100px] flex justify-end items-center px-1">
+                    <FiPlus
+                      className={`text-black text-2xl cursor-pointer transform transition-transform duration-300 ${
+                        openItems === index ? "rotate-45" : ""
+                      }`}
+                      onClick={() => handleDescription(index)}
+                    />
+                  </div>
+                </div>
+                <div>
+                  {openItems === index && (
+                    <div className="">
+                      <p
+                        className="flex p-3 border-t-2 select-none"
+                        dangerouslySetInnerHTML={{ __html: item?.answer }}
+                      ></p>
+                    </div>
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
